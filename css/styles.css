@@ -7,6 +7,7 @@
 /* Цвет при ховере, фокусе кнопки #2196F3 */
 /* Цвет ссылок в футере rgba(255, 255, 255, 0.6) */
 /* Цвет обрамления галереи #eeeeee */
+/* Цвет социальных ссылок и обводки #AFB1B8; */
 
 
 /* Утилиты для страниц */
@@ -268,8 +269,6 @@ border-bottom: 1px solid #ECECEC;
 
 }
 
-
-
 .features-list {
   display: flex;
 }
@@ -411,6 +410,55 @@ margin-bottom: 10px;
   border-radius: 50%;
 }
 
+/* Секция "Постоянные клиенты" */
+
+/* Стили заголовка */
+.clients-title {
+  margin-bottom: 50px;
+  
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+/* Позиционирование списка клиентов */
+.clients-links {
+  display: flex;
+  justify-content: center;
+}
+
+.client-item + .client-item {
+  margin-left: 30px;
+}
+
+/* Стили и позиционирование логотипов ВНУТРИ ссылок */
+.client-link {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--socil-links-color);
+  border-radius: 4px;
+  fill: var(--socil-links-color);
+  
+}
+
+/* Передаем текущий цвет на логотипы */
+.icon-clien {
+  fill: currentColor;
+}
+
+/* Цвет рамки и логотипа при ховере и фокусе */
+.client-link:focus,
+.client-link:hover {
+  fill: var(--link-hover-focus-web-color);
+  border: 1px solid var(--link-hover-focus-web-color);
+}
+
+
+
 /* Подвал */
 .footer-page {
 padding-top: 60px;
@@ -480,6 +528,63 @@ margin-bottom: 9px;
 .footer-address .link:focus {
   color: var(--link-hover-focus-web-color);
 }
+
+/* "Присоединяйтесь" */
+.join {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--primary-background-color);
+}
+
+.footer {
+  display: flex;
+  align-items: baseline;
+}
+.container-join {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+}
+
+.join {
+  margin-bottom: 20px;
+}
+
+.footer-social-links {
+  display: flex;
+  width: 206px;
+}
+
+.footer-social-link + .footer-social-link {
+  margin-left: 10px;
+}
+
+.footer-social-link-item {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--galery-background);
+}
+
+.footer-social-icon {
+  fill: currentColor;
+}
+
+.footer-social-link-item:hover,
+.footer-social-link-item:focus {
+  background-color: var(--link-hover-focus-web-color);
+
+}
+
+
 
 /* СТРАНИЦА ПОРТФОЛИО  */
 /* МЕИН */
